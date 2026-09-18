@@ -41,6 +41,13 @@ h2 {
   padding-top: 20px; 
 }
 
+.image-container {
+  width: 130px; 
+  height: 130px;
+  background-color: #595959;
+  border-radius: 130px;
+}
+
 .person {
   width: 60%; 
   height: 230px;
@@ -55,11 +62,59 @@ h2 {
   justify-content:space-around;
   margin-top: 40px; 
 }
+
 .developers {
   display: flex;
   justify-content: center;
   gap: 20%; 
   margin-top: 20px; 
+}
+
+.chapitre {
+  width: 60%; 
+  height: 230px;
+  margin-bottom: 110px;
+  background-color: #585757;
+  border-radius: 10px;
+}
+
+.cours {
+  display: flex;
+  justify-content:space-evenly;
+  gap: 20px; 
+  
+}
+
+.Algorithme {
+  width: 60px; 
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.C {
+  width: 60px; 
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.PHP {
+  width: 60px; 
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.Js {
+  width: 60px; 
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 ul {
@@ -92,6 +147,8 @@ ul li a:hover {
   justify-content:space-around;
   gap: 300px;
   text-align: center;
+  border-top: 1px solid;
+  border-color: #656464;
   padding: 20px;
   width: 100%;
 }
