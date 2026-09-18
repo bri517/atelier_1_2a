@@ -15,3 +15,88 @@
   color: white;
   z-index: 1000;
 }
+
+body {
+  margin-top: 170px;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+center {
+  flex: 1;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+h2 {
+  padding-top: 20px; 
+}
+
+.person {
+  width: 60%; 
+  height: 230px;
+  margin-bottom: 110px;
+  background-color: #585757;
+  border-radius: 10px;
+
+}
+
+.CV {
+  display: flex;
+  justify-content:space-around;
+  margin-top: 40px; 
+}
+.developers {
+  display: flex;
+  justify-content: center;
+  gap: 20%; 
+  margin-top: 20px; 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #140c16;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #464646;
+}
+
+.footer {
+  background-color: #fefefe;
+  display: flex;
+  justify-content:space-around;
+  gap: 300px;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  gap: 80px;
+}
