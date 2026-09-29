@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Iris_logo.png" type="image/png">
     <title>cours</title>
 </head>
 <body>
@@ -23,54 +24,586 @@
         <div class="chapitre">
             <h2>chapitre 1</h2>
             <div class="cours">
-                <div class="Algorithme"></div>
-                <div class="C"></div>
-                <div class="PHP"></div>
-                <div class="Js"></div>
+                <div class="Algorithme">
+                <pre>Déclaration 
+lg, lr, p, s : réel
+Début
+afficher ("Donnez la longueur :")
+saisir (lg)
+afficher ("Donnez la largeur :")
+saisir (lr)
+p &lt;- 2*(lr + lg)
+s &lt;- lg*lr
+afficher ("La surface :",s)
+afficher ("Le périmetre :",p) 
+Fin rectangle 
+                </pre>
+                </div>
+                <div class="C">
+                <pre><code>#include &lt;stdio.h&gt;
+int main (){
+    float lg, lr, p, s; 
+    printf("Donnez la longueur :"); 
+    scanf("%f", & lg); 
+    printf("Donnez la largeur :"); 
+    scanf("%f", & lr);
+    p = 2*(lr + lg) ;
+    s = lg*lr ;
+    printf ("La surface : %f",s);
+    printf ("Le périmetre :%f",p); 
+    return 0; 
+}
+                    </code></pre>
+                </div>
+                <div class="PHP">
+                <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Rectangle &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;center&gt;
+        &lt;h1&gt; Exercice Rectangle &lt;/h1&gt;
+        &lt;form method="post" &gt;
+            Longueur : &lt;br&gt; 
+            &lt;input type="text" name="lg"&gt; &lt;br&gt;
+            Largeur : &lt;br&gt; 
+            &lt;input type="text" name="lr"&gt; &lt;br&gt;
+            &lt;input type="submit" name="Calculer" value="Calculer"&gt;
+        &lt;/form&gt;
+        &lt;?php
+            if(isset($_POST["Calculer"])){
+                $lg = $_POST['lg'];
+                $lr = $_POST['lr'];
+
+                $s = $lg * $lr;
+                $p = 2 * ($lg + $lr);
+
+                printf(" &lt;br&gt; La surface est de: %f", $s);
+                printf(" &lt;br&gt; Le périmètre est de: %f", $p);
+            }
+        ?&gt;
+
+&lt;/center&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
+                <div class="Js">
+
+                </div>
             </div>
         </div>
         <div class="chapitre">
             <h2>chapitre 2</h2>
             <div class="cours">
-                <div class="Algorithme"></div>
-                <div class="C"></div>
-                <div class="PHP"></div>
-                <div class="Js"></div>
+                <div class="Algorithme">
+                <pre>
+Déclaration 
+    a, b, x : réel 
+Début 
+    Afficher ("Donner le premier coeff :")
+    saisir (a)
+    Afficher ("Donner le second coeff :")
+    saisir (b)
+    Si a = 0 
+        Alors Si b = 0 
+                    Alors Afficher ("Ens. des solutions est R")
+                    Sinon Afficher ("Ens. des solutions est vide")
+            Finsi 
+        Sinon 
+            x <- -b/a 
+            Afficher ("la solution est de : ", x)
+    Finsi 
+Fin equation 
+                    </pre>
+                </div>
+                <div class="C">
+                <pre><code>
+#include &lt;stdio.h&gt;
+
+int main(){
+    float a,b,x;
+    printf("Donner le premier coeff:\n");
+    scanf("%d",&a);
+    printf("Donner le deuxieme coeff:\n");
+    scanf("%d",&b);
+    if(a==0){
+        if(b==0){
+            printf("ensemble des Reels");
+        }
+        else{
+            printf("ensemble vide");
+        }
+    }
+    else{
+        x = -b/a;
+        printf("La solution est :%f",x);
+    }
+    return 0;
+}
+                    </code></pre>
+                </div>
+                <div class="PHP">
+                <pre><code>
+&lt;head&gt;
+    &lt;title&gt;Equation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1>exercice Equation&lt;/h1&gt;
+    &lt;form method="post"&gt;
+        Premier coeff : &lt;br&gt;
+        &lt;input type="text" name="a"&gt;&lt;br&gt;
+        Deuxime coeff : &lt;br&gt;
+        &lt;input type="text" name="b"&gt;&lt;br&gt;
+        
+        &lt;input type="submit" name="Résoudre" value="Résoudre"&gt;&lt;br&gt;
+    &lt;/form&gt;
+    &lt;?php
+        if(isset($_POST["Résoudre"])){
+            $a = $_POST['a'];
+            $b = $_POST['b'];
+            if($a==0){
+                if($b==0){
+                    printf("ensemble des Reels");
+                    }
+                    else{
+                        printf("ensemble vide");
+                    }
+                }
+                else{
+                    $x = -$b/$a;
+                    printf("La solution est :%f",$x);
+                }
+        }
+    ?&gt;
+&lt;/body&gt;
+                    </code></pre>
+                </div>
+                <div class="Js">
+                <pre><code>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Equation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;exercice Equation&lt;/h1&gt;
+    &lt;script type="text/javascript"&gt;
+        let a = parseFloat(prompt("Donner premier coeff : "));
+        let b = parseFloat(prompt("Donner deuxieme coeff : "));
+        if(a==0){
+            if(b==0){
+                alert("ensemble des Reels");
+                }
+                else{
+                    alert("ensemble vide");
+                }
+            }
+            else{
+                x = -b/a;
+                alert("La solution est : "+x);
+            }
+        &lt;/script&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
             </div>
         </div>
         <div class="chapitre">
             <h2>chapitre 3</h2>
             <div class="cours">
-                <div class="Algorithme"></div>
-                <div class="C"></div>
-                <div class="PHP"></div>
-                <div class="Js"></div>
+                <div class="Algorithme">
+                <pre>Déclaration 
+nb, div : entier 
+Début 
+    afficher("entrer un entier:")
+    saisir (nb)
+    pour div allant de 1 à nb faire
+        si nb%div=0
+        alors afficher("diviseur:", div)
+        fin si
+    fin pour
+Fin diviseurs 
+                    </pre>
+                </div>
+                <div class="C">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(){
+    int nb,div;
+    printf("Donner un nombre entier :\n");
+    scanf("%d",&nb);
+    for(div = 1;div <= nb;div++){
+        if (nb%div ==0){
+            printf("%d est un diviseur.",div);
+        }
+    }
+    return 0;}
+                    </code></pre>
+                </div>
+                <div class="PHP">
+                <pre><code>&lt;head&gt;
+    &lt;title&gt;Diviseur&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Diviseur&lt;/h1&gt;
+    &lt;form method="post"&gt;
+        Premier coeff : &lt;br&gt;
+        &lt;input type="text" name="nb"&gt;&lt;br&gt;
+        &lt;input type="submit" name="Afficher" value="Afficher"&gt;&lt;br&gt;
+    &lt;/form&gt;
+    &lt;?php
+        if (isset($_POST['Afficher'])){
+            $nb = $_POST['nb'];
+            for($div = 1;$div &lt;= $nb;$div++){
+                if ($nb%$div ==0){
+                    printf("%d est un diviseur.",$div);
+                }
+            }
+        }
+    ?&gt;
+&lt;/body&gt;
+                    </code></pre>
+                </div>
+                <div class="Js">
+                <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Diviseur&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;exercice Diviseur&lt;/h1&gt;
+        &lt;script type="text/javascript"&gt;
+            let nb = parseFloat(prompt("Donner un nombre entier : "));
+            for(let div = 1;div <= nb;div++){
+                if (nb%div ==0){
+                    alert(div +" est un diviseur.");
+                }
+            }
+        &lt;/script>
+        
+    &lt;/body>
+                        &lt;/html>
+                    </code></pre>
+                </div>
             </div>
         </div>
         <div class="chapitre">
             <h2>chapitre 4</h2>
             <div class="cours">
-                <div class="Algorithme"></div>
-                <div class="C"></div>
-                <div class="PHP"></div>
-                <div class="Js"></div>
+                <div class="Algorithme">
+                <pre>Algo : tableau 
+Déclaration 
+    tab : tableau [10] de réel 
+    i : entier 
+    prixMax, prixMin, moyenne : réel 
+Début 
+    //saisie du tableau 
+    Afficher ("Entrer les prix SVP :")
+    Pour i allant de 1 à 10 faire 
+        Afficher ("Donner le prix numero ", i, " : ")
+        saisir (tab[i])
+    Fin pour 
+
+    //détermination du min max et moyenne 
+    moyenne &lt;- 0 
+    prixMin &lt;- tab[1]
+    prixMax &lt;- tab[1]
+    Pour i allant de 1 à 10 faire
+        Si tab[i] &lt;- prixMin 
+            Alors prixMin &lt;- tab[i]
+        Fin si 
+        Si tab[i] > prixMax
+            Alors prixMax &lt;- tab[i]
+        Fin si 
+        moyenne &lt;- moyenne + tab[i]
+    Fin pour 
+    moyenne &lt;- moyenne / 10 
+    afficher ("la moyenne des prix :", moyenne)
+    afficher ("le prix max est : ", prixMax)
+    afficher ("le prix min est : ", prixMin)
+Fin tableau 
+                    </pre>
+                </div>
+                <div class="C">
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(){
+    float tab[10];
+    float prixMax,prixMin,prixMoyen;
+    int i;
+    for(i=0;i&lt;10;i++){
+        printf("Donner un prix :");
+        scanf("%f",&tab[i]);
+    }
+    prixMax =tab[0];
+    prixMin = tab[0];
+    prixMoyen = 0;
+    for(i=0;i&lt;10;i++){
+        if(tab[i]&gt;prixMax){
+            prixMax = tab[i];
+        }
+        if (tab[i]&lt;prixMin){
+            prixMin = tab[i];
+        }
+        prixMoyen = prixMoyen + tab[i];
+    }
+    prixMoyen = prixMoyen/10;
+    printf ("Le prix moyen est : %f\n",prixMoyen);
+    printf ("Prix Max :%f\n et prix Min : %f",prixMax,prixMin);
+    return 0;
+}</code></pre>
+                </div>
+                <div class="PHP">
+                <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;tableau&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Exercice tableaux Prix&lt;/h1&gt;
+    &lt;form method="post"&gt;
+        Entrer les prix(;): &lt;br&gt;
+        &lt;input type="text" name="tab"&gt;&lt;br&gt;
+        &lt;input type="submit" name="Calculer" value="Calculer"&gt;
+    &lt;/form&gt;
+    &lt;?php  
+    if (isset($_POST['Calculer'])){
+        $tab =explode(";",$_POST['tab']);
+        $prixMIN = $tab[0];
+        $prixMAX = $tab[0];
+        $prixMOYEN = 0;
+        for($i=0;$i&lt;count($tab);$i++){
+            if($tab[$i]&gt;$prixMAX){
+                $prixMAX = $tab[$i];
+            }
+            if ($tab[$i]&lt;$prixMIN){
+                $prixMIN = $tab[$i];
+            }
+            $prixMOYEN = $prixMOYEN + $tab[$i];
+        }
+        $prixMOYEN = $prixMOYEN/count($tab);
+        printf ("&lt;br&gt;Le prix moyen est : %f", $prixMOYEN);
+        printf ("&lt;br&gt;Prix Max :%f et prix Min : %f", $prixMAX, $prixMIN);
+    }
+    ?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
+                <div class="Js">
+                <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;tab Prix&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt; Exercice Tab Prix en JS &lt;/h1&gt;
+    &lt;script type="text/javascript"&gt;
+        let chaine = prompt("Donner les prix separés par (;) :"); 
+        let tab = chaine.split(";").map(Number); 
+        let prixMoyen = 0; 
+        let prixMin = tab[0]; 
+        let prixMax = tab[0];
+        for (let i = 0; i &lt; tab.length ; i++){
+            if (tab[i] &lt; prixMin) {
+                prixMin = tab[i];
+            }
+            if (tab[i] &gt; prixMax) {
+                prixMax = tab[i];
+            }
+            prixMoyen = prixMoyen + tab[i];
+        }
+        prixMoyen = prixMoyen / tab.length ;
+        alert ("Le prix moyen est :"+prixMoyen);
+        alert ("Prix Max :"+prixMax +" et prix Min :"+prixMin);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
             </div>
         </div>
         <div class="chapitre">
             <h2>chapitre 5</h2>
             <div class="cours">
-                <div class="Algorithme"></div>
-                <div class="C"></div>
-                <div class="PHP"></div>
-                <div class="Js"></div>
+                <div class="Algorithme">
+                <pre>Déclaration d'une procédure 
+procédure nomProc (listes arguments)
+Déclaration 
+    //variables locales 
+Début 
+    //traitement 
+Fin nomProc 
+
+Appel de la procédure : nomProc (liste parametres)
+
+Déclaration d'une fonction : 
+fonction nomFct (liste arguments) : type 
+Déclaration 
+    //variables locales 
+Début 
+    //traitement 
+    retourner expression
+Fin nomFct
+Appel de la fonction : 
+nomVariable &lt;- nomFct(listeparametres)
+                    </pre>    
+                </div>
+                <div class="C">
+                <pre><code>#include <stdio.h>
+
+void liste_diviseurs (int nb){
+    int i;
+    for(i=1;i<=nb;i++){
+        if (nb%i==0){
+            printf("%d est un diviseur.",i);
+        }
+    }
+}
+
+int main (){
+    int nb ; 
+    printf("Donner un nombre entier :"); 
+    scanf("%d", & nb); 
+    //appel de la procédure 
+    liste_diviseurs(nb);
+    return 0;
+}
+                    </code></pre>
+                </div>
+                <div class="PHP">
+                <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Diviseurs Proc&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;
+    &lt;h1&gt; Exercice Diviseurs avec Procédure&lt;/h1&gt;
+    &lt;form method="post"&gt;
+        Donner un nombre entier : 
+        &lt;br&gt;
+        &lt;input type="text" name="nb"&gt; 
+        &lt;br&gt;
+        &lt;input type="submit" name="Afficher" value="Afficher"&gt;
+    &lt;/form&gt;
+    &lt;?php
+    function liste_diviseurs ($nb){
+        for ($i=1; $i&lt;=$nb; $i++){
+            if($nb%$i==0){
+            printf("%d est un diviseur&lt;br&gt;",$i);
+            }
+        }
+    }
+    if(isset($_POST['Afficher'])){
+        $nb = $_POST['nb']; 
+        //appel de la procédure 
+        liste_diviseurs($nb);
+    }
+
+    ?&gt;
+&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
+                <div class="Js">
+                <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Diviseurs Proc&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Exercice Diviseurs avec Procédure JS& lt;/h1&gt;
+    &lt;script type="text/javascript"&gt;
+        function liste_diviseurs(nb){
+            let i ; 
+            for (i=1; i<=nb; i++){
+                if (nb %i ==0){
+                    alert(i + "est un diviseur");
+                }
+            }
+        }
+        let nb = parseInt(prompt("Donner un entier :"));
+        //appel de la procédure 
+        liste_diviseurs(nb);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
             </div>
         </div>
         <div class="chapitre">
             <h2>chapitre 6</h2>
             <div class="cours">
-                <div class="Algorithme"></div>
-                <div class="C"></div>
-                <div class="PHP"></div>
+                <div class="Algorithme">
+                <pre>Algo : copier_coller 
+Déclaration 
+        nomS , nomD : chaine 
+        fs, fd : fichier 
+        car : caractère 
+    Début 
+        Afficher ("Donner le nom de la source 😊)
+        Saisir(nomS)
+        Afficher ("Donner le nom de la destination 😊)
+        Saisir(nomD)
+        fs &lt;- ouvrir (nomS, "lecture")
+        fd &lt;- ouvrir (nomD, "ecriture")
+        tant que fin_fichier(fs) = faux faire 
+            lire (fs, car)
+            ecrire (fd, car)
+        Fin tantque 
+        fermer(fs)
+        fermer(fd)
+        afficher ("Operation copier - coller terminee")
+    Fin copier_colle
+                    </pre>
+                </div>
+                <div class="C">
+                <pre><code>#include <stdio.h>
+int main (){
+    char nomS [20], nomD[20]; 
+    FILE * fs, *fd; 
+    char car; 
+    printf ("Donner le nom de la source :");
+    scanf("%s", &nomS);
+    printf ("Donner le nom de la destination :");
+    scanf("%s", &nomD);
+    fs = fopen(nomS, "r"); 
+    fd = fopen(nomD, "w"); 
+    while ( ! feof(fs)){
+        car = fgetc(fs); 
+        fputc(car, fd);
+    }
+    fclose(fs); 
+    fclose(fd);
+    return 0; 
+}
+                    </code></pre>
+                </div>
+                <div class="PHP">
+                <pre><code>&lt;html>
+&lt;head>
+    &lt;title>fichiers&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1> Exercice Fichiers PHP &lt;/h1>
+    &lt;form method="post">
+        Entrer le nom de la source :&lt;br>
+        &lt;input type="text" name="nomS">&lt;br>
+        Entrer le nom de la destination :&lt;br>
+        &lt;input type="text" name="nomD">&lt;br>
+        &lt;input type="submit" name="CopierColler" value="CopierColler">
+    &lt;/form>
+    &lt;?php
+if (isset($_POST['CopierColler'])){
+
+}
+?>
+&lt;/body>
+&lt;/html&gt;
+                    </code></pre>
+                </div>
                 <div class="Js"></div>
             </div>
         </div>
@@ -85,22 +618,19 @@
                 <p>Tel:</p>
             </div>
             <div class="contact">
-                <h3>Korotoumou</h3>
-                <p>Nom de Famille</p>
-                <p>Email:</p>
-                <p>Tel:</p>
+                <h3>Korotoumou Këita</h3>
+                <p>Email: kotykeita@icloud.com</p>
+                <p>Tel: 06.99.21.09.22</p>
             </div>
             <div class="contact">
-                <h3>Siara</h3>
-                <p>Nom de Famille</p>
-                <p>Email:</p>
-                <p>Tel:</p>
+                <h3>Siara Nassoko</h3>
+                <p>Email: nassokosira54@gmail.com</p>
+                <p>Tel:06.65.14.34.13</p>
             </div>
             <div class="contact">
-                <h3>Brice</h3>
-                <p>Nom de Famille</p>
-                <p>Email:</p>
-                <p>Tel:</p>
+                <h3>Brice Zonzolo</h3>
+                <p>Email: bricezonzolo15@gmail.com</p>
+                <p>Tel: 06.15.73.11.82</p>
             </div>
         </div>
     </footer>

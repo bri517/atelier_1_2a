@@ -49,7 +49,7 @@ h2 {
 }
 
 .person {
-  width: 60%; 
+  width: 30%; 
   height: 600px;
   margin-bottom: 110px;
   background-color: #585757;
@@ -71,8 +71,8 @@ h2 {
 }
 
 .chapitre {
-  width: 60%; 
-  height: 230px;
+  width: 100%; 
+  height: auto;
   margin-bottom: 110px;
   background-color: #585757;
   border-radius: 10px;
@@ -80,41 +80,26 @@ h2 {
 
 .cours {
   display: flex;
-  justify-content:space-evenly;
-  gap: 20px; 
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;      
 }
 
-.Algorithme {
-  width: 60px; 
-  height: 60px;
+.cours > div {
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: 20px;
+  padding: 15px;
+  flex: 1 1 300px;   /* chaque bloc prend la place dispo, 300px minimum */
+  min-width: 0;      /* permet le défilement interne */
+  overflow-x: auto;  /* barre de défilement si une ligne est trop longue */
+  text-align: left;
 }
 
-.C {
-  width: 60px; 
-  height: 60px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.PHP {
-  width: 60px; 
-  height: 60px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.Js {
-  width: 60px; 
-  height: 60px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  margin-top: 20px;
+.cours pre {
+  margin: 0;          /* enlève la marge par défaut du <pre> */
+  font-size: 14px;    /* plus de code visible avant de devoir défiler */
 }
 
 ul {
@@ -155,5 +140,4 @@ ul li a:hover {
 
 .contact-container {
   display: flex;
-  gap: 80px;
 }
