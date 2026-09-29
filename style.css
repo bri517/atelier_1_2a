@@ -50,7 +50,7 @@ h2 {
 
 .person {
   width: 60%; 
-  height: 230px;
+  height: 600px;
   margin-bottom: 110px;
   background-color: #585757;
   border-radius: 10px;
@@ -60,7 +60,7 @@ h2 {
 .CV {
   display: flex;
   justify-content:space-around;
-  margin-top: 40px; 
+  
 }
 
 .developers {
