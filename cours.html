@@ -88,9 +88,26 @@ int main (){
 &lt;/html&gt;</code></pre>
                 </div>
                 <div class="Js">
-
+                     <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Equation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;exercice Equation&lt;/h1&gt;
+    &lt;script type="text/javascript"&gt;
+        let lg = parseFloat(prompt("Donnez la longueur :"));
+                let lr = parseFloat(prompt("Donnez la largeur :"));
+                let p = 2 * (lr + lg);
+                let s = lg * lr;
+                alert("La surface est de: " + s);
+                alert("Le périmètre est de: " + p);
+        &lt;/script&gt;
+        
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
                 </div>
             </div>
+            <button onclick="Rectangle()">exécuter</button>
         </div>
         <div class="chapitre">
             <h2>chapitre 2</h2>
@@ -203,6 +220,7 @@ int main(){
 &lt;/html&gt;</code></pre>
                 </div>
             </div>
+            <button onclick="Equation()">exécuter</button>
         </div>
         <div class="chapitre">
             <h2>chapitre 3</h2>
@@ -277,6 +295,7 @@ int main(){
                         &lt;/html></code></pre>
                 </div>
             </div>
+            <button onclick="Diviseur()">exécuter</button>
         </div>
         <div class="chapitre">
             <h2>chapitre 4</h2>
@@ -408,6 +427,7 @@ int main(){
 &lt;/html&gt;</code></pre>
                 </div>
             </div>
+            <button onclick="Tableau()">exécuter</button>
         </div>
         <div class="chapitre">
             <h2>chapitre 5</h2>
@@ -513,6 +533,7 @@ int main (){
 &lt;/html&gt;</code></pre>
                 </div>
             </div>
+            <button onclick="Liste_diviseurs()">exécuter</button>
         </div>
         <div class="chapitre">
             <h2>chapitre 6</h2>
@@ -582,9 +603,110 @@ if (isset($_POST['CopierColler'])){
 &lt;/body>
 &lt;/html&gt;</code></pre>
                 </div>
-                <div class="Js"></div>
+                <div class="Js">
+                <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset-"UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+            function copierColler() {
+                const nomS = prompt("Entrez le nom de fichier source : ");
+                const nomD = prompt("Entrez le nom de fichier destination : ");
+
+                const contenu = fs.readFileSync(nomS, "utf8");
+                fs.writeFileSync(nomD, contenu);
+
+                console.log(`Le fichier ${nomS} a été copié dans le fichier ${nomD}`);
+                }
+
+                copierColler();
+    &lt;/script&gt;
+&lt;body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
             </div>
+            <button onclick="CopierColler()">exécuter</button>
         </div>
+        <script type="text/javascript">
+                function Rectangle() {
+                    let lg = parseFloat(prompt("Donnez la longueur :"));
+                    let lr = parseFloat(prompt("Donnez la largeur :"));
+                    let p = 2 * (lr + lg);
+                    let s = lg * lr;
+                    alert("La surface est de: " + s);
+                    alert("Le périmètre est de: " + p);
+                }
+                function Equation() {
+                    let a = parseFloat(prompt("Donner premier coeff : "));
+                    let b = parseFloat(prompt("Donner deuxieme coeff : "));
+                    if(a==0){
+                        if(b==0){
+                            alert("ensemble des Reels");
+                            }
+                            else{
+                                alert("ensemble vide");
+                            }
+                        }
+                        else{
+                            x = -b/a;
+                            alert("La solution est : "+x);
+                        }
+                }
+                function Diviseur() {
+                    let nb = parseFloat(prompt("Donner un nombre entier : "));
+                    for(let div = 1;div <= nb;div++){
+                        if (nb%div ==0){
+                            alert(div +" est un diviseur.");
+                        }
+                    }
+                }
+                function Tableau() {
+                    let chaine = prompt("Donner un nombre entier : ");
+                    let tab = chaine.split(";").map(Number);
+                    let prixMax =tab[0];
+                    let prixMin = tab[0];
+                    let prixMoyen = 0;
+                    for(let i=0;i<tab.length;i++){
+                        if(tab[i]>prixMax){
+                            prixMax = tab[i];
+                        }
+                        if (tab[i]<prixMin){
+                            prixMin = tab[i];
+                        }
+                        prixMoyen = prixMoyen + tab[i];
+                    }
+                    prixMoyen = prixMoyen/tab.length;
+                    alert ("<br>Le prix moyen est : %f", $prixMoyen);
+                    alert ("<br>Prix Max :%f et prix Min : %f", $prixMax, $prixMin);
+                }
+                function Liste_diviseurs(){
+                    let nb = parseInt(prompt("Donner un entier :"));
+                    let i ; 
+                    for (i=1; i<=nb; i++){
+                        if (nb %i ==0){
+                            alert(i + "est un diviseur");
+                        }
+                    }
+                }
+                function CopierColler() {
+                    const fs = require("fs");
+                    const prompt = require("prompt-sync")(); // npm install prompt-sync
+
+                    function copierColler() {
+                    const nomS = prompt("Entrez le nom de fichier source : ");
+                    const nomD = prompt("Entrez le nom de fichier destination : ");
+
+                    const contenu = fs.readFileSync(nomS, "utf8");
+                    fs.writeFileSync(nomD, contenu);
+
+                    console.log(`Le fichier ${nomS} a été copié dans le fichier ${nomD}`);
+                    }
+                    copierColler();
+                }
+            </script>
     </center>
     <footer class="footer">
         <h2>BTS SIO SLAM</h2>

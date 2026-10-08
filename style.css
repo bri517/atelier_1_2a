@@ -133,6 +133,20 @@ ul li a:hover {
   border-radius: 100%;
 }
 
+button {
+  background-color: #140c16;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px 10px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
 .corps{
   background-color: #ffffff;
   width: 90px;
